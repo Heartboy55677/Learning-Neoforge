@@ -2,5 +2,7 @@
   "item.heartboysfirstdraft.bismuth": "Bismuth",
   "item.heartboysfirstdraft.raw_bismuth": "Raw Bismuth",
   "block.heartboysfirstdraft.bismuth_block": "Block of Bismuth",
-  "block.heartboysfirstdraft.bismuth_ore": "Bismuth Ore"
+  "block.heartboysfirstdraft.bismuth_ore": "Bismuth Ore",
+  "creativetab.heartboysfirstdraft.bismuth_items": "Bismuth Items",
+  "creativetab.heartboysfirstdraft.bismuth_blocks": "Bismuth Blocks"
 }

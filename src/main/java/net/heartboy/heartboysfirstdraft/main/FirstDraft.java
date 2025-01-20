@@ -1,6 +1,7 @@
 package net.heartboy.heartboysfirstdraft.main;
 
 import net.heartboy.heartboysfirstdraft.block.ModBlocks;
+import net.heartboy.heartboysfirstdraft.item.ModCreativeModeTabs;
 import net.heartboy.heartboysfirstdraft.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -33,6 +34,7 @@ public class FirstDraft
         NeoForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
