@@ -1,3 +1,6 @@
 {
-  "item.heartboysfirstdraft.bismuth": "Bismuth"
+  "item.heartboysfirstdraft.bismuth": "Bismuth",
+  "item.heartboysfirstdraft.raw_bismuth": "Raw Bismuth",
+  "block.heartboysfirstdraft.bismuth_block": "Block of Bismuth",
+  "block.heartboysfirstdraft.bismuth_ore": "Bismuth Ore"
 }

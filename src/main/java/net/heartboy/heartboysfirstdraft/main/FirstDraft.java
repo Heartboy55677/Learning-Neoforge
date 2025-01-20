@@ -1,10 +1,7 @@
 package net.heartboy.heartboysfirstdraft.main;
 
-import net.heartboy.heartboysfirstdraft.items.ModItems;
-import net.minecraft.client.data.models.BlockModelGenerators;
-import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.renderer.item.BlockModelWrapper;
-import net.minecraft.resources.ResourceLocation;
+import net.heartboy.heartboysfirstdraft.block.ModBlocks;
+import net.heartboy.heartboysfirstdraft.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -23,9 +20,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-import java.util.Collections;
-
-import static net.heartboy.heartboysfirstdraft.items.ModItems.BISMUTH;
+import static net.heartboy.heartboysfirstdraft.item.ModItems.BISMUTH;
+import static net.heartboy.heartboysfirstdraft.item.ModItems.RAW_BISMUTH;
 
 @Mod(FirstDraft.MOD_ID)
 public class FirstDraft
@@ -36,6 +32,7 @@ public class FirstDraft
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -43,8 +40,14 @@ public class FirstDraft
 
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event){
-    if(event.getTabKey()==CreativeModeTabs.INGREDIENTS)
+    if(event.getTabKey()==CreativeModeTabs.INGREDIENTS){
         event.accept(BISMUTH);
+        event.accept(RAW_BISMUTH);
+    }
+    if(event.getTabKey()==CreativeModeTabs.BUILDING_BLOCKS)
+        event.accept(ModBlocks.BISMUTH_BLOCK);
+    if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS)
+        event.accept(ModBlocks.BISMUTH_ORE);
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event){

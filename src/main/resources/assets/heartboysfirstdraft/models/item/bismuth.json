@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "heartboysfirstdraft:bismuth"
+    "layer0": "heartboysfirstdraft:item/bismuth"
   }
 }
