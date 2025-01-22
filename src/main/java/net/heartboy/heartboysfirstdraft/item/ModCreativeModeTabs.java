@@ -6,7 +6,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -29,6 +28,7 @@ public class ModCreativeModeTabs {
             .displayItems((parameters, output) -> {
                 output.accept(ModBlocks.BISMUTH_ORE.get());
                 output.accept(ModBlocks.BISMUTH_BLOCK.get());
+                output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE);
             }).build());
 
     public static void register(IEventBus eventBus){

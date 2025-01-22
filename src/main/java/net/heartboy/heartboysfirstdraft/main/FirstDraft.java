@@ -41,24 +41,27 @@ public class FirstDraft
     private void commonSetup(final FMLCommonSetupEvent event){
 
     }
-    private void addCreative(BuildCreativeModeTabContentsEvent event){
-    if(event.getTabKey()==CreativeModeTabs.INGREDIENTS){
-        event.accept(BISMUTH);
-        event.accept(RAW_BISMUTH);
-    }
-    if(event.getTabKey()==CreativeModeTabs.BUILDING_BLOCKS)
-        event.accept(ModBlocks.BISMUTH_BLOCK);
-    if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS)
-        event.accept(ModBlocks.BISMUTH_ORE);
-    }
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event){
-
-    }
-    @EventBusSubscriber(modid =  MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents{
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event){
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(BISMUTH);
+            event.accept(RAW_BISMUTH);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_ORE);
+            event.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE);
         }
     }
+    @SubscribeEvent
+        public void onServerStarting (ServerStartingEvent event){
+
+        }
+        @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+        public static class ClientModEvents {
+            @SubscribeEvent
+            public static void onClientSetup(FMLClientSetupEvent event) {
+            }
+        }
 }

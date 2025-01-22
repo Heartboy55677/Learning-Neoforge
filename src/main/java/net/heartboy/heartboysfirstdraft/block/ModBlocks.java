@@ -24,10 +24,17 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BISMUTH_ORE = BLOCKS.registerBlock("bismuth_ore",
             Block::new,
-            BlockBehaviour.Properties.of());
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(4f).requiresCorrectToolForDrops().mapColor(MapColor.STONE));
 
     public static final DeferredItem<BlockItem> BISMUTH_ORE_ITEM = ITEMS.registerSimpleBlockItem("bismuth_ore",
             BISMUTH_ORE);
+
+    public static final DeferredBlock<Block> BISMUTH_DEEPSLATE_ORE = BLOCKS.registerBlock("bismuth_deepslate_ore",
+            Block::new,
+            BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).sound(SoundType.DEEPSLATE).strength(4f).requiresCorrectToolForDrops());
+
+    public static final DeferredItem<BlockItem> BISMUTH_DEEPSLATE_ORE_ITEM = ITEMS.registerSimpleBlockItem("bismuth_deepslate_ore",
+            BISMUTH_DEEPSLATE_ORE);
 
     public static void register (IEventBus eventBus){
         BLOCKS.register(eventBus);
