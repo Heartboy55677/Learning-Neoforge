@@ -19,6 +19,10 @@ public class ModCreativeModeTabs {
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.BISMUTH.get());
                 output.accept(ModItems.RAW_BISMUTH.get());
+                output.accept(ModItems.CHISEL.get());
+                output.accept(ModItems.RADISH.get());
+                output.accept(ModItems.FROSTFIRE_ICE.get());
+                output.accept(ModItems.STARLIGHT_ASHES.get());
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BISMUTH_BLOCKS_TAB = CREATIVE_MODE_TABS.register("bismuth_blocks", () -> CreativeModeTab.builder()
@@ -28,7 +32,8 @@ public class ModCreativeModeTabs {
             .displayItems((parameters, output) -> {
                 output.accept(ModBlocks.BISMUTH_ORE.get());
                 output.accept(ModBlocks.BISMUTH_BLOCK.get());
-                output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE);
+                output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
+                output.accept(ModBlocks.MAGIC_BLOCK.get());
             }).build());
 
     public static void register(IEventBus eventBus){

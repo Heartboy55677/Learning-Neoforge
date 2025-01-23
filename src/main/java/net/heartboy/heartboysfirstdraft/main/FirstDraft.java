@@ -21,8 +21,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-import static net.heartboy.heartboysfirstdraft.item.ModItems.BISMUTH;
-import static net.heartboy.heartboysfirstdraft.item.ModItems.RAW_BISMUTH;
+import static net.heartboy.heartboysfirstdraft.item.ModItems.*;
 
 @Mod(FirstDraft.MOD_ID)
 public class FirstDraft
@@ -45,19 +44,20 @@ public class FirstDraft
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(BISMUTH);
             event.accept(RAW_BISMUTH);
-        }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+        }if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BISMUTH_BLOCK);
-        }
-        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+        }if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BISMUTH_ORE);
             event.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE);
+        }if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(CHISEL);
+        }if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(RADISH);
         }
     }
     @SubscribeEvent
-        public void onServerStarting (ServerStartingEvent event){
+        public void onServerStarting (ServerStartingEvent event){}
 
-        }
         @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
         public static class ClientModEvents {
             @SubscribeEvent

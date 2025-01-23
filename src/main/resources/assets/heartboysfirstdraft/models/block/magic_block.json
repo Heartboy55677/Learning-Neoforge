@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "heartboysfirstdraft:block/magic_block"
+  }
+}

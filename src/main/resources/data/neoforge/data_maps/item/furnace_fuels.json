@@ -1,0 +1,10 @@
+{
+  "values": {
+    "heartboysfirstdraft:starlight_ashes": {
+      "burn_time": 1200
+    },
+    "heartboysfirstdraft:frostfire_ice": {
+      "burn_time": 800
+    }
+  }
+}
